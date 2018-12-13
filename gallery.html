@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GALLERY</title>
+    <link rel="icon" href="images/demo/logo.png" />
+  </head>
+  <body>
+    <link
+      rel="stylesheet"
+      href="css/flexslider.css"
+      type="text/css"
+      media="screen"
+    />
+    <div class="flexslider">
+      <ul class="slides">
+        <li><img src="images/demo/a.jpg" alt="image" /></li>
+        <li><img src="images/demo/b.jpg" alt="image" /></li>
+        <li><img src="images/demo/c.jpg" alt="image" /></li>
+        <li><img src="images/demo/d.jpg" alt="image" /></li>
+        <li><img src="images/demo/e.jpg" alt="image" /></li>
+        <li><img src="images/demo/f.jpg" alt="image" /></li>
+        <li><img src="images/demo/g.jpg" alt="image" /></li>
+        <li><img src="images/demo/h.jpg" alt="image" /></li>
+        <li><img src="images/demo/i.jpg" alt="image" /></li>
+        <li><img src="images/demo/a.jpg" alt="image" /></li>
+      </ul>
+    </div>
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>');
+    </script>
+    <!-- FlexSlider -->
+    <script defer src="js/jquery.flexslider.js"></script>
+
+    <script>
+      $(function() {
+        SyntaxHighlighter.all();
+      });
+      $(window).load(function() {
+        $(".flexslider").flexslider({
+          animation: "slide",
+          start: function(slider) {
+            $("body").removeClass("loading");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
